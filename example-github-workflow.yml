@@ -1,0 +1,21 @@
+name: Tempo CI example
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/conduktor/tempo-ci-beta:latest
+    steps:
+      - name: Run conduktor pilot on scenario
+        env:
+          SCENARIO_ID: XX-XX-XX-XX-XX
+          SERVER_URL: XX.XX.XX.XX:9090
+        run: /opt/docker/bin/conduktor-testing
