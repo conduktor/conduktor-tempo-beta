@@ -1,0 +1,34 @@
+version: "3.5"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+  api:
+    container_name: tempo_beta
+    image: conduktorbeta/tempo-beta:latest
+    ports:
+      - "8080:8080"
+    environment:
+      DB_USER: ${POSTGRES_USER:-postgres}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      DB_HOST: postgres
+      DB_PORT: "5432"
+      PORT: "8080"
+      GRPC_PORT: "9090"
+      DB_DATABASE: "postgres"
+      DB_CONNECTION_TIMEOUT: 30000
+      BETA_KEY: <<REPLACE_ME>>
+    depends_on:
+      - postgres
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  postgres:
