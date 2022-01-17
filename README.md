@@ -12,7 +12,7 @@ Perfect to test locally.
 
 **To reach a kafka started on the host, you should use `host.docker.internal` instead of localhost**
 
-Get the docker-compose.yml file in this repository, update the secret key with the one provided by your account manager, then just run
+Get the docker-compose.yml file in this repository, update the BETA_KEY env with the key provided by your account manager, then just run
 
 `docker-compose up`
 
@@ -41,7 +41,7 @@ It will require a few env var :
 - DB_PASSWORD: the Postgres user password
 - PORT : port of the http api
 - GRPC_PORT : port of the grpc api, used by the CI runner
-- ENV: must be "private_beta" to allow using the secret key
+- BETA_KEY: the secret key provided by your account manager
 
 ## Running the CI runner
 

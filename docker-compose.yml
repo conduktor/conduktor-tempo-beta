@@ -24,7 +24,7 @@ services:
       GRPC_PORT: "9090"
       DB_DATABASE: "postgres"
       DB_CONNECTION_TIMEOUT: 30000
-      ENV: "private_beta"
+      BETA_KEY: <<REPLACE_ME>>
     depends_on:
       - postgres
     extra_hosts:
