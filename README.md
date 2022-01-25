@@ -6,6 +6,8 @@ During the private beta, Conduktor Tempo is accessible via a docker image. You w
 
 It also requires a postgres instance (included in Option 1).
 
+> The default *Playground* workspace and test case requires you to configure your cluster and create a "my-topic" topic before use
+
 
 ### Option 1- Docker compose (app + postgres)
 
