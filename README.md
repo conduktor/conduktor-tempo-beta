@@ -6,8 +6,7 @@ During the private beta, Conduktor Tempo is accessible via a docker image. You w
 
 It also requires a postgres instance (included in Option 1).
 
-> The default *Playground* workspace and test case requires you to configure your cluster and create a "my-topic" topic before use
-
+> The default _Playground_ workspace and test case requires you to configure your cluster and create a "my-topic" topic before use
 
 ### Option 1- Docker compose (app + postgres)
 
@@ -29,12 +28,9 @@ Get the docker-compose.yml file in this repository, update the BETA_KEY env with
 
 `docker-compose down`
 
-
-
-Tempo will be available on http://localhost:8080 by default. You can change the port by changing the PORT env var in the docker-compose file.
+Tempo will be available on http://localhost:8080 by default. You can change the port by changing the HTTP_PORT env var in the docker-compose file.
 
 > Notes : To reach a kafka started on the host, you should use `host.docker.internal` instead of localhost
-
 
 ### Option 2- Docker image
 
@@ -51,7 +47,7 @@ It will require a few environment variables :
 - DB_DATABASE: name of the Postgres database
 - DB_USER: the Postgres user
 - DB_PASSWORD: the Postgres user password
-- PORT : port of the http api, used to reach Tempo from your browser
+- HTTP_PORT : port of the http api, used to reach Tempo from your browser
 - GRPC_PORT : port of the grpc api, used by the CI runner
 - BETA_KEY: the secret key provided by your account manager
 
