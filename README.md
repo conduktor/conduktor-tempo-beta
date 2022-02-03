@@ -1,6 +1,6 @@
 # Conduktor Tempo - private beta
 
-***Warning** : Due to some deep database changes, next release (0.5.0, planned for the 01 or 02 feb) will trigger a reset of the scenarios. From there we'll do our maximum to ensure backward compatibility and avoid any data lost.*
+***Warning** : Due to some deep database changes, the 0.5.0 will reset the scenarios. From now on we should be able to provide backward compatibility or migrations. Thank you for your understanding*
 
 
 ## Running the application
