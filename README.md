@@ -56,7 +56,7 @@ It will require a few environment variables :
 
 ## Running the CI runner
 
-The CI runner is currently available as a simple docker container. We'll provide more packaging options in a close future.
+The CI runner is currently available as a simple docker container. We'll provide more options in a close future.
 
 We provide the following image :
 
