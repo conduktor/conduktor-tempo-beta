@@ -1,6 +1,5 @@
 # Conduktor Tempo - private beta
-
-***Warning** : Due to some deep database changes, the 0.5.0 will reset the scenarios. From now on we should be able to provide backward compatibility or migrations. Thank you for your understanding*
+Current version: **0.6.0** - [Changelog](https://github.com/conduktor/conduktor-tempo-beta/releases)
 
 
 ## Running the application
@@ -9,7 +8,12 @@ During the private beta, Conduktor Tempo is accessible via a docker image. You w
 
 It also requires a postgres instance (included in Option 1).
 
-> The default _Playground_ workspace and test case requires you to configure your cluster and create a "my-topic" topic before use
+The default _Playground_ workspace and test case requires you to configure your cluster and create a "my-topic" topic before use.
+
+[Our new learning site](https://www.conduktor.io/kafka/starting-kafka) has plenty of information regarding starting local Kafka at the below location:
+
+
+To update, you don't need to pull this repository. You just need to pull the new image ( `docker-compose pull` if using option 1)
 
 ### Option 1- Docker compose (app + postgres)
 
@@ -23,7 +27,7 @@ Get the docker-compose.yml file in this repository, update the BETA_KEY env with
 
 `docker-compose up`
 
-- To update or to make sure you're running the latest version, use
+- **To update** or to make sure you're running the latest version, use
 
 `docker-compose pull && docker-compose up`
 
