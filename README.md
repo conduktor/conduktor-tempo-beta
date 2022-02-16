@@ -8,12 +8,15 @@ During the private beta, Conduktor Tempo is accessible via a docker image. You w
 
 It also requires a postgres instance (included in Option 1).
 
+To update, you don't need to pull this repository. You just need to pull the new image ( `docker-compose pull` if using option 1)
+
 The default _Playground_ workspace and test case requires you to configure your cluster and create a "my-topic" topic before use.
 
-[Our new learning site](https://www.conduktor.io/kafka/starting-kafka) has plenty of information regarding starting local Kafka at the below location:
+[Our new learning site](https://www.conduktor.io/kafka/starting-kafka) has plenty of information regarding starting a local kafka instance.
 
+Tempo should be able to connect to any cluster that don't require a custom plugin (as long as it's accessible in the network), if it's not the case please reach out to us. For SSL configurations, we have a small documentation [here](https://github.com/conduktor/conduktor-tempo-beta/tree/main/using-certificates)
 
-To update, you don't need to pull this repository. You just need to pull the new image ( `docker-compose pull` if using option 1)
+Any feedback/bug report is appreciated ! 
 
 ### Option 1- Docker compose (app + postgres)
 
