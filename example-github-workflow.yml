@@ -16,6 +16,6 @@ jobs:
     steps:
       - name: Run Tempo scenario
         env:
-          SCENARIO_ID: XX-XX-XX-XX-XX
+          SCENARIO_ID: XXXXXXXXXX
           SERVER_URL: XX.XX.XX.XX:9090
         run: /opt/docker/bin/conduktor-testing
