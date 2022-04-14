@@ -1,5 +1,5 @@
 # Conduktor Tempo - private beta
-Current version: **0.6.0** - [Changelog](https://github.com/conduktor/conduktor-tempo-beta/releases)
+Current version: **0.7.4** - [Changelog](https://github.com/conduktor/conduktor-tempo-beta/releases)
 
 
 ## Running the application
